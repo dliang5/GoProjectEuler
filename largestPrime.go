@@ -1,21 +1,22 @@
 package main
+
 import "fmt"
 
-func main(){
+func main() {
 	num := 600851475143
 	newNum := num
 	largestPrime := 0
 	counter := 2
 
-	for counter * counter <= newNum {
-		if newNum % counter == 0 {
-			newNum = newNum / counter;
+	for counter*counter <= newNum {
+		if newNum%counter == 0 {
+			newNum = newNum / counter
 			largestPrime = counter
-		}else {
+		} else {
 			counter++
 		}
 	}
-	if newNum > largestPrime{
+	if newNum > largestPrime {
 		largestPrime = newNum
 	}
 	fmt.Println(num, newNum, largestPrime)
